@@ -1,9 +1,27 @@
 //.................changing color 
-let colorxx=document.getElementById("colorx").value;
 
+change.addEventListener("click", function () {
+
+    let colorx = document.getElementById('colorx');
+    let color = colorx.value;
+    return color;
+});
+
+function color_changer() {
+    let colorx = document.getElementById('colorx');
+    let color = colorx.value;
+    return color;
+
+};
+let colorx = document.getElementById('colorx');
+    let color = colorx.value;
+//...........................Eraser function.............
+// erase.addEventListener("click", function () {
+//     this.style.backgroundColor = "white";
+// });
 
 //..........................................................................
-            // function for making grid
+// function for making grid
 function createGrid(x) {
     var container = document.getElementById("container");
     for (var rows = 0; rows < x; rows++) {
@@ -35,24 +53,34 @@ function refreshGrid() {
 
 document.addEventListener("DOMContentLoaded", function () {
     createGrid(24);
-    // mouce over effect
+
     var gridItems = document.querySelectorAll(".grid");
+    let colorx = document.getElementById('colorx');
     gridItems.forEach(function (item) {
+        
         item.addEventListener("mouseover", function () {
-            this.style.backgroundColor = colorxx;  // default black on load
+            this.style.backgroundColor = colorx.value;  // default black on load
         });
     });
+
+    // let colorx = document.getElementById('colorx');
+    // let color = colorx.value;
 
     var newGridButton = document.querySelector(".newGrid");
     newGridButton.addEventListener("click", function () {
         refreshGrid();
 
+
+
+        // let colorx = document.getElementById('colorx');
+        // let color = colorx.value;
+
         var gridItems = document.querySelectorAll(".grid");
         gridItems.forEach(function (item) {
-            item.addEventListener("mouseover",function () {
-                this.style.backgroundColor = colorxx;
+            item.addEventListener("mouseover", function () {
+                this.style.backgroundColor = colorx.value;
             });
-            
+
         });
     });
 });
@@ -61,6 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // document.querySelectorAll(".grid").forEach(function(gridItems) {
 //   gridItems.addEventListener("mouseover", function() {
-//     this.style.backgroundColor = color;
+    // this.style.backgroundColor = color;
 //   });
 // });
