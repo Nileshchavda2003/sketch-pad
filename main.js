@@ -1,4 +1,5 @@
-
+//.................changing color 
+let colorxx=document.getElementById("colorx").value;
 
 
 //..........................................................................
@@ -33,12 +34,12 @@ function refreshGrid() {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    createGrid(16);
-
+    createGrid(24);
+    // mouce over effect
     var gridItems = document.querySelectorAll(".grid");
     gridItems.forEach(function (item) {
         item.addEventListener("mouseover", function () {
-            this.style.backgroundColor = "black";
+            this.style.backgroundColor = colorxx;  // default black on load
         });
     });
 
@@ -48,9 +49,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var gridItems = document.querySelectorAll(".grid");
         gridItems.forEach(function (item) {
-            item.addEventListener("mouseover", function () {
-                this.style.backgroundColor = "black";
+            item.addEventListener("mouseover",function () {
+                this.style.backgroundColor = colorxx;
             });
+            
         });
     });
 });
+
+// const color = document.getElementById('colorx').value;
+
+// document.querySelectorAll(".grid").forEach(function(gridItems) {
+//   gridItems.addEventListener("mouseover", function() {
+//     this.style.backgroundColor = color;
+//   });
+// });
