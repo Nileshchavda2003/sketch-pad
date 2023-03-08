@@ -1,24 +1,7 @@
-//.................changing color 
 
-change.addEventListener("click", function () {
-
-    let colorx = document.getElementById('colorx');
-    let color = colorx.value;
-    return color;
-});
-
-function color_changer() {
-    let colorx = document.getElementById('colorx');
-    let color = colorx.value;
-    return color;
-
-};
 let colorx = document.getElementById('colorx');
-    let color = colorx.value;
+let color = colorx.value;
 //...........................Eraser function.............
-// erase.addEventListener("click", function () {
-//     this.style.backgroundColor = "white";
-// });
 
 //..........................................................................
 // function for making grid
@@ -55,13 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     createGrid(24);
 
     var gridItems = document.querySelectorAll(".grid");
+
     let colorx = document.getElementById('colorx');
+
     gridItems.forEach(function (item) {
-        
+
         item.addEventListener("mouseover", function () {
             this.style.backgroundColor = colorx.value;  // default black on load
         });
     });
+
+    
+
 
     // let colorx = document.getElementById('colorx');
     // let color = colorx.value;
@@ -70,25 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
     newGridButton.addEventListener("click", function () {
         refreshGrid();
 
-
-
-        // let colorx = document.getElementById('colorx');
-        // let color = colorx.value;
-
         var gridItems = document.querySelectorAll(".grid");
         gridItems.forEach(function (item) {
             item.addEventListener("mouseover", function () {
                 this.style.backgroundColor = colorx.value;
             });
 
+
         });
     });
 });
-
-// const color = document.getElementById('colorx').value;
-
-// document.querySelectorAll(".grid").forEach(function(gridItems) {
-//   gridItems.addEventListener("mouseover", function() {
-    // this.style.backgroundColor = color;
-//   });
-// });
